@@ -163,6 +163,7 @@ public class JdbcTemplate extends org.springframework.jdbc.core.JdbcTemplate {
 	public int insert(String tableName, MyMap dtoMap) {
 		StringBuffer sql = new StringBuffer("INSERT INTO " + tableName + " ( ");
 		Set<String> keySet = dtoMap.map.keySet();
+		System.out.println("key set, " + keySet);
 		int count = 0;
 		for (String string : keySet) {
 			System.out.println("string dto, " + string);

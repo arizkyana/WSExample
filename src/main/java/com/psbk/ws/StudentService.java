@@ -45,6 +45,9 @@ public class StudentService extends MasterConnection {
 		JdbcTemplate template = new JdbcTemplate(super.conn, super.ds);
 		MyMap map = new MyMap();
 		map.put("student", s);
+		System.out.println("map student \n");
+		System.out.println(map.get("student"));
+		
 		template.insert("student", map);
 		super.closeConnection();
 		return Response.status(201).entity(respon).build();
